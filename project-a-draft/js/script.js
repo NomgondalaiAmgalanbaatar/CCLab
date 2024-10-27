@@ -87,7 +87,8 @@ class Food {
 }
 
 function setup() {
-    createCanvas(800, 500);
+    let canvas = createCanvas(800, 500);
+    canvas.id("p5-canvas")
     animalX = width / 2;
     animalY = height - 100;
     lastFoodSpawn = millis();

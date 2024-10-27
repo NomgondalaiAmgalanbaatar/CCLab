@@ -20,6 +20,12 @@ body {
     margin-bottom: 60px;
 }
 
+#p5-canvas {
+    position: absolute;
+    left: 440px;
+    top: 100px;
+}
+
 /* main content */
 #main-wrapper {
     width: 800px;
