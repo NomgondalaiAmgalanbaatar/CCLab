@@ -10,8 +10,6 @@
   5. have fun.
 */
 
-let dancer;
-
 function setup() {
   // no adjustments in the setup function needed...
   let canvas = createCanvas(windowWidth, windowHeight);
