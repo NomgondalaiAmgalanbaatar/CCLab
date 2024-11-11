@@ -1,45 +1,67 @@
-let v = [];
 
+let particles = [];
+let num = 100;
 
 function setup() {
   let canvas = createCanvas(500, 400);
   canvas.parent("p5-canvas-container");
-  for (let i = 0; i < 10; i++) {
-
-  }
   background(220);
+
+  for (let i = 0; i < num; i++);
+  let x = random(width);
+  let y = random(width);
+  let rad = random(10, 20);
+  particles.push(new Particle(x, y, rad));
+
 }
 
 function draw() {
   //
+  background(0, 50);
+  for (let i = 0; i < particles.length; i++) {
+    let p = particles[i]
+    p.move();
+    p.display();
+    p.reappear();
+  }
+
 }
-// class
-class myBalls {
-  constructor(u, v, r) {
-    this.x = u;
-    this.y = v;
-    this.dia = r;
+
+class Particle {
+  constructer(x, y, rad) {
+    this.x = x;
+    this.y = y;
+    this.rad = rad;
+    this.xSpeed = random(1, 3);
+    this.ySpeed = random(1, 3);
     this.r = random(255);
     this.g = random(255);
     this.b = random(255);
   }
-  show() {
-    fill(this.r, this.g, this.b);
-    circle(this.x, this.y, this.dia);
-    this.drawFace();
-    this.drawMouth();
-  }
-  drawFace() {
-    circle(this.x - this.dia * 0.2, this.y - this.dia * 0.1);
-    circle(this.x + this.dia * 0.2, this.y - this.dia * 0.1);
-  }
-  drawMouth() {
-    push();
-    translate(x, y);
-    ellipse(0, 0, this.dia * 0.2, this.dia * 0.5);
-    pop();
-  }
+
   move() {
-    this.y += random(-20, 20)
+    this.x += this.xSpeed;
+    this.y += this.ySpeed;
+  }
+
+  reappear() {
+    if (this.x > width) {
+      this.x = 0;
+    } else if (this.x < 0) {
+      this.x = width;
+    } if (this.y > height) {
+      this.y = 0;
+    } else if (this.y < 0) {
+      this.y = height;
+    }
+  }
+
+  display() {
+    push();
+    noStroke();
+    fill(this.r, this.g, this.b);
+    textSize(28);
+    text("STAR", this.x, this.y);
+    pop();
   }
 }
