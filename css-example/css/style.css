@@ -1,0 +1,67 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+
+canvas {
+  display: block;
+}
+
+h2 {
+  background-color: rgb(179, 255, 0);
+}
+
+span {
+  background-color: aqua;
+  font-weight: bold;
+}
+
+p {
+  font-family: 'Times New Roman', Times, serif;
+  margin-top: 10px;
+}
+
+.font-code {
+  font-family: monospace;
+}
+
+.text-align {
+  text-align: center;
+}
+
+.wrapper {
+  background-color: rgb(255, 128, 0);
+  width: 700px;
+  height: 200px;
+  max-width: 500px;
+}
+
+.box {
+  background-color: yellowgreen;
+  margin: 10px;
+  padding: 30px;
+  border: 2px dashed black;
+  position: absolute;
+  right: 100px;
+  top: 100px;
+}
+
+#purple {
+  color: purple;
+}
+
+.wrapper:hover {
+  visibility: hidden;
+}

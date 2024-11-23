@@ -1,0 +1,89 @@
+/* html,
+body {
+  margin: 0;
+  padding: 0;
+} */
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+canvas {
+  display: block;
+}
+
+.wrapper {
+  width: 800px;
+  margin: 50px;
+  /* top, bottom, left, right */
+
+}
+
+.title-container {
+  /* background-color: aquamarine; */
+  width: 800px;
+  height: 100px;
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-style: normal;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+
+}
+
+.nav {
+  margin: 15px;
+  font-size: 15px;
+}
+
+.nav-container {
+  /* background-color: bisque; */
+  height: 50px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.flexbox-container {
+  /* background-color: skyblue; */
+  height: 1000px;
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.box {
+  background-color: burlywood;
+  height: 150px;
+  width: 220px;
+  margin: 20px;
+}
+
+#special-box {}
+
+#special-box:hover {
+  background-color: blue;
+}
+
+#p5-canvas-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
