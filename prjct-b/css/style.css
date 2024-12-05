@@ -1,0 +1,23 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+canvas {
+  display: block;
+}
+
+#p5-canvas-container {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+#terminal-container {
+  position: absolute;
+  bottom: 41%;
+  left: 49%;
+  transform: translate(-50%);
+}
