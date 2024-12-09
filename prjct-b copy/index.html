@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Bomb Defusal Scenario</title>
+
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <script src="lib/p5.js"></script>
+  <script src="lib/p5.sound.js"></script>
+</head>
+
+<body>
+  <div id="p5-canvas-container"></div>
+  <div id="terminal-container"></div>
+
+  <script src="js/sketch.js"></script>
+  <script src="js/terminal.js"></script>
+  <script>
+    window.scenarioController = {
+      deactivateDevice: function () {
+        // Stop the countdown
+        countdownStarted = false;
+
+        // Fade to black
+        let opacity = 0;
+        let fadeInterval = setInterval(() => {
+          opacity += 0.02;
+          document.body.style.backgroundColor = `rgba(0, 0, 0, ${opacity})`;
+          if (opacity >= 1) {
+            clearInterval(fadeInterval);
+            // Display success message
+            document.body.innerHTML = '<div id="success-message"></div>';
+            typeWriter("Congratulations! You've successfully disarmed the bomb and saved the day. Your quick thinking and problem-solving skills have prevented a catastrophe. Well done, agent!", 0);
+          }
+        }, 50);
+      }
+    };
+
+    function typeWriter(text, i) {
+      if (i < text.length) {
+        document.getElementById("success-message").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(() => typeWriter(text, i), 50);
+      }
+    }
+  </script>
+</body>
+
+</html>

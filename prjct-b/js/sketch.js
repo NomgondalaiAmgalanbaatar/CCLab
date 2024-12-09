@@ -1,5 +1,5 @@
 function setup() {
-  let canvas = createCanvas(520, 380, WEBGL);
+  let canvas = createCanvas(505, 375, WEBGL);
   canvas.parent("p5-canvas-container");
   background(20);
 }
