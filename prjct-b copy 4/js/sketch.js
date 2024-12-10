@@ -147,7 +147,6 @@ class Bomb {
     sphere(100);
     pop();
 
-    // Panel lines
     push();
     noFill();
     strokeWeight(1);

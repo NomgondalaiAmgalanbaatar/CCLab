@@ -24,7 +24,6 @@ body {
 
 #terminal-container {
   transform: translate(-8.5%, -205%);
-  /* Increased height to match the new canvas size */
 }
 
 .begin-button {

@@ -85,7 +85,6 @@ class Bomb {
     // Main sphere body
     sphere(100);
 
-    // Panel lines
     noFill();
     stroke(255);
     strokeWeight(1);

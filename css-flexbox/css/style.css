@@ -75,8 +75,6 @@ canvas {
   margin: 20px;
 }
 
-#special-box {}
-
 #special-box:hover {
   background-color: blue;
 }

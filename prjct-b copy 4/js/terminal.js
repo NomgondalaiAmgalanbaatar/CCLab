@@ -44,7 +44,7 @@ let terminal = function (p) {
         if (input === '1006') {
             window.deactivateBomb();
         } else {
-            timeRemaining = Math.max(0, timeRemaining - 5); // Apply penalty, but don't go below 0
+            timeRemaining = Math.max(0, timeRemaining - 5);
         }
         input = '';
     }
