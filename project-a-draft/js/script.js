@@ -52,7 +52,7 @@ class Bubble {
     }
 
     display() {
-        fill(150, 200, 255, 100); // Light blue with alpha
+        fill(150, 200, 255, 100);
         noStroke();
         ellipse(this.x, this.y, this.size, this.size);
     }
@@ -125,7 +125,7 @@ function draw() {
         // Animal approaches cursor
         let targetX = mouseX;
         let targetY = mouseY;
-        animalX += (targetX - animalX) * 0.02; // Adjust speed as needed
+        animalX += (targetX - animalX) * 0.02;
         animalY += (targetY - animalY) * 0.02;
 
         // Open mouth when approaching food
@@ -160,7 +160,6 @@ function draw() {
         animalY = constrain(animalY, 0, height);
     }
 
-    // Draw animal with potential mouth opening
     drawAnimal(mouthOpen);
 
     // Check for win condition
@@ -228,7 +227,6 @@ function drawBubbles() {
     }
 }
 
-// Modified to accept a mouthOpen parameter
 function drawAnimal(mouthOpen = false) {
     push();
     translate(animalX, animalY);
@@ -273,12 +271,9 @@ function drawAnimal(mouthOpen = false) {
         ellipse(-10, -15, 5, 5);
         ellipse(10, -15, 5, 5);
 
-        // Mouth with opening animation
-        // Mouth with opening animation
         if (mouthOpen) {
-            // Open mouth
-            fill(255, 150); // Lighter fill to indicate open mouth
-            rect(-10, -10, 20, 5); // Simple open mouth representation
+            fill(255, 150);
+            rect(-10, -10, 20, 5);
         } else {
             // Closed mouth
             line(-5, -5, 5, -5);
